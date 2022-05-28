@@ -25,9 +25,9 @@ export class Card extends Component {
                         </div>
                             <div class="character__overlay">
                                 <ul class="list-unstyled">
-                                    <li>Habilidad:${this.pokemon.abilities}</li>
+                                    <li>Habilidad: ${this.pokemon.abilities[0].ability.name}</li>
+                                    <li>Tipo: ${this.pokemon.types[0].type.name}</li>
                                     <li>Altura: ${this.pokemon.height}</li>
-                                    <li>Tipo: ${this.pokemon.types[0].type}</li>
                                 </ul>
                                 <div class="character__actions">
                                     <button class="">⭐</button>

@@ -13,40 +13,43 @@ export class Controller {
         for (let i = this.startIndex; i < this.startIndex + 10; i++) {
             arrayPokemon.push(pokeApi.getPokemon(i));
         }
-        Promise.all(arrayPokemon).then(
-            (item) => new List(item, 'slot.hitch__list')
-        );
-        setTimeout(() => {
+        Promise.all(arrayPokemon).then((item) => {
+            new List(item, 'slot.hitch__list');
             this.manageComponent();
-        }, 1000);
+        });
     }
-    // newLoop() {
-    //     const pokeApi = new HttpStoreClass(
-    //         'https://pokeapi.co/api/v2/pokemon/'
-    //     );
-    //     const arrayPokemon: Array<Promise<iPokemon>> = [];
-    //     this.startIndex = 1;
-    //     for (let i = this.startIndex; i < this.startIndex + 10; i++) {
-    //         arrayPokemon.push(pokeApi.getPokemon(i));
-    //     }
-    //     Promise.all(arrayPokemon).then(
-    //         (item) => new List(item, 'slot.hitch__list')
-    //     );
-    //     setTimeout(() => {
-    //         this.manageComponent();
-    //     }, 1000);
-    // }
+    newLoop() {
+        const pokeApi = new HttpStoreClass(
+            'https://pokeapi.co/api/v2/pokemon/'
+        );
+        const arrayPokemon: Array<Promise<iPokemon>> = [];
+        for (let i = this.startIndex; i < this.startIndex + 10; i++) {
+            arrayPokemon.push(pokeApi.getPokemon(i));
+        }
+        Promise.all(arrayPokemon).then((item) => {
+            new List(item, 'slot.hitch__list');
+            this.manageComponent();
+        });
+    }
     manageComponent() {
         document
-            .querySelectorAll('.button')
+            .querySelectorAll('.buttton__next')
             .forEach((item) =>
                 item.addEventListener('click', this.handlerButton.bind(this))
             );
     }
     handlerButton(ev: Event) {
-        console.log('click');
-        this.startIndex = this.startIndex + 10;
         console.log(this.startIndex);
-        return this.startIndex;
+        if (
+            (<HTMLElement>ev.target).id === 'previous' &&
+            this.startIndex === 1
+        ) {
+            this.startIndex = this.startIndex;
+        } else if ((<HTMLElement>ev.target).id === 'next') {
+            this.startIndex = this.startIndex + 10;
+        } else {
+            this.startIndex = this.startIndex - 10;
+        }
+        this.newLoop();
     }
 }
