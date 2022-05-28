@@ -17,7 +17,7 @@ export class List extends Component {
 
               </ul>
                               <button class="button buttton__next" id="next">NEXT</button>
-                               <button class="button buttton__next" id="previous"> PREVIOUS</button>
+                               <button class="button buttton__next button__previous" id="previous"> PREVIOUS</button>
             </div>
                     `;
         return template;

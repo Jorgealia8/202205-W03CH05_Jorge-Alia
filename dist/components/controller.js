@@ -36,6 +36,10 @@ export class Controller {
             this.startIndex === 1) {
             this.startIndex = this.startIndex;
         }
+        else if (ev.target.id === 'next' &&
+            this.startIndex === 841) {
+            this.startIndex = this.startIndex;
+        }
         else if (ev.target.id === 'next') {
             this.startIndex = this.startIndex + 10;
         }

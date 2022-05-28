@@ -5,6 +5,12 @@
     grid-gap: 10px;
 }
 
+.list-unstyled {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
 .character__card {
     border-radius: 2rem;
     text-align: center;
