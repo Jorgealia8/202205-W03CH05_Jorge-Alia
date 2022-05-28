@@ -5,7 +5,54 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>POKEMON</title>
-        <script src="./dist/scripts/app.js"></script>
+        <script src="./dist/scripts/app.js" type="module"></script>
+        <link rel="stylesheet" href="./dist/css/sytle.css" />
+        <link
+            rel="shortcut icon"
+            href="./src/images/pokemon-logo.svg"
+            type="image/x-icon"
+        />
     </head>
-    <body></body>
+    <body>
+        <header>
+            <h1>POKEALIA</h1>
+            <nav>
+                <ul>
+                    <li>HOME</li>
+                    <li>FAVORITES</li>
+                    <li>CONTACT</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <slot class="hitch__list">
+                <div class="app container">
+                    <ul class="list">
+                        <li>
+                            <div class="card character__card">
+                                <img
+                                    src=""
+                                    alt="Foto"
+                                    class="character__picture card-img-top"
+                                />
+                                <div class="card-body">
+                                    <h2
+                                        class="character__name card-title h4"
+                                    ></h2>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </slot>
+        </main>
+
+        <footer>
+            <address>
+                <p>JORGE ALÍA</p>
+                <p>ISDI CODERS</p>
+            </address>
+        </footer>
+    </body>
 </html>

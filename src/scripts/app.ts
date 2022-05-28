@@ -1,3 +1,9 @@
-import { HttpStoreClass } from '../services/http.store.class.js';
+import { Controller } from '../components/controller.js';
 
-const Poke = new HttpStoreClass('https://pokeapi.co/api/v2/pokemon/134');
+function app() {
+    new Controller();
+}
+
+(() => {
+    document.addEventListener('DOMContentLoaded', app);
+})();

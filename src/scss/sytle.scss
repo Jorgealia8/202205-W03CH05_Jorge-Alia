@@ -1,0 +1,13 @@
+.list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-gap: 10px;
+}
+
+.character__card {
+    border-radius: 2rem;
+    text-align: center;
+    background-color: aqua;
+    height: 300px;
+}
