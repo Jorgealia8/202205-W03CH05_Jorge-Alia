@@ -12,17 +12,24 @@
             href="./src/images/pokemon-logo.svg"
             type="image/x-icon"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
+        <slot class="header"></slot>
         <header>
-            <h1>POKEALIA</h1>
-            <nav>
-                <ul>
-                    <li>HOME</li>
-                    <li>FAVORITES</li>
-                    <li>CONTACT</li>
-                </ul>
-            </nav>
+            <div class="logo">
+                <img
+                    class="logo__imagen"
+                    src="./src/images/pokemon-logo.svg"
+                    alt="logo pokemon"
+                />
+            </div>
+
+
+            <div class="blackLine"></div>
         </header>
 
         <main>
@@ -49,10 +56,21 @@
         </main>
 
         <footer>
+            <div class="blackLine"></div>
             <address>
-                <p>JORGE ALÍA</p>
-                <p>ISDI CODERS</p>
+                <p class="paragraf">JORGE ALÍA</p>
+               
+                    <img
+                        class="coders"
+                        src="./src/images/ISDIb.jpg"
+                        alt="Logo CODERS"
+                    />
+                </p>
             </address>
         </footer>
     </body>
 </html>
+
+
+
+

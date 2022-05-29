@@ -16,9 +16,13 @@ export class List extends Component {
                 <ul class="list">
 
               </ul>
-                              <button class="button buttton__next" id="next">NEXT</button>
-                               <button class="button buttton__next button__previous" id="previous"> PREVIOUS</button>
-            </div>
+                        
+<div class="container__buttons">
+ <button class="button buttton__next button__previous" id="previous">previous</button>
+                              <button class="button buttton__next" id="next">next</button>
+                              
+                         </div>
+        </div>
                     `;
         return template;
     }

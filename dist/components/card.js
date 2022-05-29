@@ -13,17 +13,15 @@ export class Card extends Component {
                <li>
                    <div class="card character__card">
                     <div class="card-body">
-                            <h2 class="character__name card-title h4">
+                            <h2 class="character__name ">
                                 ${this.pokemon.name}
                             </h2>
                         
                             <img
-                            src="${this.pokemon.sprites.front_shiny}"
+                            src="${this.pokemon.sprites.other['official-artwork'].front_default}"
                             alt="Foto"
                             class="character__picture card-img-top"
-                        />
-                        </div>
-                            <div class="character__overlay">
+                        /> <div class="character__overlay">
                                 <ul class="list-unstyled">
                                     <li>Habilidad: ${this.pokemon.abilities[0].ability.name}</li>
                                     <li>Tipo: ${this.pokemon.types[0].type.name}</li>
@@ -33,6 +31,8 @@ export class Card extends Component {
                                     <button class="">⭐</button>
                                 </div>
                             </div>
+                        </div>
+                           
                         </div>
                    </div>
                </li>`;
