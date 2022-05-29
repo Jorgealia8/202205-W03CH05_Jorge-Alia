@@ -35,6 +35,7 @@ export class Controller {
         if (ev.target.id === 'previous' &&
             this.startIndex === 1) {
             this.startIndex = this.startIndex;
+            ev.target.style;
         }
         else if (ev.target.id === 'next' &&
             this.startIndex === 841) {

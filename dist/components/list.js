@@ -17,11 +17,10 @@ export class List extends Component {
 
               </ul>
                         
-<div class="container__buttons">
- <button class="button buttton__next button__previous" id="previous">previous</button>
-                              <button class="button buttton__next" id="next">next</button>
-                              
-                         </div>
+                    <div class="container__buttons">
+                            <button class="button buttton__next button__previous" id="previous">⬅</button>
+                            <button class="button buttton__next" id="next">➡</button>     
+                    </div>
         </div>
                     `;
         return template;

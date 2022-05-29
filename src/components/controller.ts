@@ -45,6 +45,7 @@ export class Controller {
             this.startIndex === 1
         ) {
             this.startIndex = this.startIndex;
+            (<HTMLElement>ev.target).style;
         } else if (
             (<HTMLElement>ev.target).id === 'next' &&
             this.startIndex === 841

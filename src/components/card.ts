@@ -28,7 +28,7 @@ export class Card extends Component {
                                     <li>Altura: ${this.pokemon.height}</li>
                                 </ul>
                                 <div class="character__actions">
-                                    <button class="">⭐</button>
+                                    <button class="buttonStar"><img class="buttonStar__star"src="./src/images/estrellafavoritos.png" alt="Añadir a favoritos"></button>
                                 </div>
                             </div>
                         </div>
