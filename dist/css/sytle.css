@@ -5,6 +5,7 @@
 
 body {
   width: 100%;
+  margin: 0;
 }
 
 .list {
@@ -16,6 +17,7 @@ body {
   display: grid;
   grid-template-columns: 200px 200px 200px 200px 200px;
   grid-gap: 40px;
+  padding-inline-start: 0;
 }
 
 .list-unstyled {
@@ -62,7 +64,6 @@ header {
   background-color: #c32324;
   width: 100%;
   margin-top: -10px;
-  margin-left: -10px;
 }
 
 .title {
@@ -103,7 +104,6 @@ header {
 footer {
   background-color: #c32324;
   width: 100%;
-  margin-left: -10px;
   height: 250px;
   font-size: 30px;
 }
